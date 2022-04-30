@@ -3,6 +3,7 @@
         <title>Banana Editor</title>
         <link rel="stylesheet" href="./style/menu.css">
         <script src="./about/popup.js"></script>
+        <script src="./js/pixi.js"></script>
     </head>
     <body>
         <div class="topnav">
@@ -26,10 +27,11 @@
                 <button class="dropbtn">About</button>
                 <div class="dropdown-content">
                     <a onclick="aboutWindow()">About</a>
-                    <a href="">Documentation</a>
-                    <a href="">Report Issue</a>
+                    <a onclick="docsWindow()">Documentation</a>
+                    <a onclick="issueWindow()">Report Issue</a>
                 </div>
             </div>
         </div>
+        <script src="./js/editor.js"></script>
     </body>
 </html>
