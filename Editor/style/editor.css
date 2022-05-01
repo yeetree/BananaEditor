@@ -1,0 +1,15 @@
+#editor {
+    font-family: Arial;
+    display: flex;
+    text-align: center;
+    line-height: .85;
+    padding-top: 10px;
+}
+#canvas {
+    flex: 1;
+    text-align: right;
+}
+#options {
+    text-align: left;
+    display: flex;
+}

@@ -1,7 +1,11 @@
 <html>
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
     <head>
         <title>Banana Editor</title>
         <link rel="stylesheet" href="./style/menu.css">
+        <link rel="stylesheet" href="./style/editor.css">
         <script src="./about/popup.js"></script>
         <script src="./js/pixi.js"></script>
     </head>
@@ -11,16 +15,8 @@
                 <button class="dropbtn">File</button>
                 <div class="dropdown-content">
                     <a href="">New</a>
-                    <a href="">Open</a>
-                    <a href="">Save</a>
-                    <a href="">Save As...</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Edit</button>
-                <div class="dropdown-content">
-                    <a href="">Undo</a>
-                    <a href="">Redo</a>
+                    <a onclick="load();">Open</a>
+                    <a onclick="save();">Save</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -30,6 +26,33 @@
                     <a onclick="docsWindow()">Documentation</a>
                     <a onclick="issueWindow()">Report Issue</a>
                 </div>
+            </div>
+        </div>
+        <div id="editor">
+            <div id="options">
+                <div style="padding-right: 40px">
+                    <h1>Body</h1>
+                    <p>Ripeness:</p>
+                    <input type="range" min="1" max="4" value="2" id="body">
+                    <p>Color Modifier:</p>
+                    <input type="color" value="#ffffff" id="bodyColor">
+                </div>
+                <div style="flex: 1">
+                    <h1>Clothes</h1>
+                    <p>Shirt:</p>
+                    <input type="range" min="1" max="7" value="1" id="shirt">
+                    <p>Color Modifier:</p>
+                    <input type="color" value="#ffffff" id="shirtColor">
+                </div>
+                <div style="flex: 2">
+                    <h1><br /></h1>
+                    <p>Pants:</p>
+                    <input type="range" min="1" max="4" value="1" id="pants">
+                    <p>Color Modifier:</p>
+                    <input type="color" value="#ffffff" id="pantsColor">
+                </div>
+            </div>
+            <div id="canvas">
             </div>
         </div>
         <script src="./js/editor.js"></script>
